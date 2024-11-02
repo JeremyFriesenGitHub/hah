@@ -40,21 +40,15 @@ body:
     attributes:
       label: Comparative Table of Technologies
       description: |-
-        ### Comparative Table of Technologies
+        Create a table comparing the different technologies that were considered and show pros and cons for specific use cases:
+
+        ```
         | Use Case | Tech 1 | Tech 2 |
         |----------|--------|--------|
         | Use Case 1 |        |        |
         | Use Case 2 |        |        |
         | Use Case 3 |        |        |
-      placeholder: |-
-        ### Comparative Table of Technologies
-        | Use Case | Tech 1 | Tech 2 |
-        |----------|--------|--------|
-        | Use Case 1 |        |        |
-        | Use Case 2 |        |        |
-        | Use Case 3 |        |        |
-    validations:
-      required: true
+        ```
   - type: textarea
     id: consequences
     attributes:
@@ -62,6 +56,6 @@ body:
       description: A description of the consequences and results of the decision
       placeholder: |-
         What are the consequences of the decision?
-        Are there any alternatives that were considered?
+        Are there any other alternatives that were considered?
     validations:
       required: true
