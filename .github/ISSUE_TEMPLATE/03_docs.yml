@@ -1,5 +1,5 @@
 
-name: Feature
+name: Docs
 description: Request a new feature
 title: 'feat(scope-of-issue): description'
 labels:
