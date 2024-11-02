@@ -42,7 +42,7 @@ body:
       description: |-
         Create a table comparing the different technologies that were considered and show pros and cons for specific use cases:
 
-        ```
+        ```bash
         | Use Case | Tech 1 | Tech 2 |
         |----------|--------|--------|
         | Use Case 1 |        |        |
