@@ -9,3 +9,16 @@ contact_links:
   - name: Community
     url: https://community.brave.com/
     about: Community support, this is the place to ask questions
+issue_template:
+  - name: Desktop issue
+    about: "An issue affecting Linux, macOS, or Windows"
+    labels: ["desktop"]
+    title: "[Desktop Issue] "
+  - name: Feature request
+    about: "Request a new feature"
+    labels: ["enhancement"]
+    title: "[Feature] "
+  - name: Bug
+    about: "Report a bug"
+    labels: ["bug"]
+    title: "[Bug] "
