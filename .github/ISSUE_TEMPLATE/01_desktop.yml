@@ -1,9 +1,7 @@
-# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
-
-name: Desktop issue
-description: An issue affecting Linux, macOS, or Windows
+name: Website issue
+description: An issue affecting cuHacking's website
 labels:
-  - OS/Desktop
+  - Website
 body:
   - type: checkboxes
     id: search
@@ -11,8 +9,7 @@ body:
       label: Search checkbox
       description: Insufficiently described issues will be closed, so please provide as much information as possible
       options:
-        - label: Have you searched for similar [issues](https://github.com/brave/brave-browser/issues?q=is%3Aissue+is%3Aopen+label%3AOS%2FDesktop)?
-
+        - label: Have you searched for similar [issues](https://github.com/cuhacking/2025/issues)?
   - type: textarea
     id: description
     attributes:
@@ -59,31 +56,15 @@ body:
       default: 0
     validations:
       required: true
-  - type: textarea
-    id: version
-    attributes:
-      label: Brave version (brave://version info)
-      description: '`Brave`, `Revision` and `OS` from `brave://version`'
-    validations:
-      required: true
-  - type: checkboxes
-    id: channels
-    attributes:
-      label: Channel information
-      description: Which browser channels does this issue occur on
-      options:
-        - label: release (stable)
-        - label: beta
-        - label: nightly
   - type: checkboxes
     id: reproducibility
     attributes:
       label: Reproducibility
       description: Does this issue occur...
       options:
-        - label: with Brave Shields disabled
-        - label: with Brave Rewards disabled
-        - label: in the latest version of Chrome
+        - label: in Safari?
+        - label: in Firefox?
+        - label: in Chrome?
   - type: textarea
     id: misc
     attributes:
