@@ -1,89 +1,56 @@
-# https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms
-
-name: Desktop issue
-description: An issue affecting Linux, macOS, or Windows
-labels:
-  - OS/Desktop
+name: ADR
+description: Record a design decision
+title: '[ADR]: description'
 body:
-  - type: markdown
+  - type: checkboxes
     attributes:
-      value: |-
-        Have you searched for similar [issues](https://github.com/brave/brave-browser/issues?q=is%3Aissue+is%3Aopen+label%3AOS%2FDesktop)?
-
-        Insufficiently described issues will be closed, so please provide as much information as possible
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: A brief description of the issue
-    validations:
-      required: true
-  - type: textarea
-    id: str
-    attributes:
-      label: Steps to reproduce
-      description: A series of steps to reproduce the issue
-      value: |-
-        1. 
-        2. 
-        3. 
-    validations:
-      required: true
-  - type: textarea
-    id: result
-    attributes:
-      label: Actual result
-      description: What happened
-      placeholder: include screenshots if needed
-    validations:
-      required: true
-  - type: textarea
-    id: expectation
-    attributes:
-      label: Expected result
-      description: What should've happened
-      placeholder: include screenshots if needed
-    validations:
-      required: true
-  - type: dropdown
-    id: reproduces
-    attributes:
-      label: Reproduces how often
-      multiple: false
+      label: Checklist
       options:
-        - Easily reproduced
-        - Intermittent issue
-        - No steps to reproduce
+        - label: Have you searched for similar issues?
+          required: true
+  - type: dropdown
+    id: platforms
+    attributes:
+      label: Platforms
+      multiple: true
+      options:
+        - all
+        - Website
+        - Docs
+        - Portal
       default: 0
     validations:
       required: true
   - type: textarea
-    id: version
+    id: problem
     attributes:
-      label: Brave version (brave://version info)
-      description: "`Brave`, `Revision` and `OS` from `brave://version`"
+      label: Problem Statement
+      description: A brief description of the what the issue of the design decision is
     validations:
       required: true
-  - type: checkboxes
-    id: channels
-    attributes:
-      label: Channel information
-      description: Which browser channels does this issue occur on
-      options:
-        - label: release (stable)
-        - label: beta
-        - label: nightly
-  - type: checkboxes
-    id: reproducibility
-    attributes:
-      label: Reproducibility
-      description: Does this issue occur...
-      options:
-        - label: with Brave Shields disabled
-        - label: with Brave Rewards disabled
-        - label: in the latest version of Chrome
   - type: textarea
-    id: misc
+    id: decision
     attributes:
-      label: Miscellaneous information
-      description: Any additional information, related issues, extra QA steps, configuration or data that might be necessary to reproduce the issue
+      label: Decision
+      description: A brief description of the architectural decision taken
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |-
+        ### Comparisons Table
+        | Use Case | Tech 1 | Tech 2 |
+        |----------|--------|--------|
+        | Use Case 1 |        |        |
+        | Use Case 2 |        |        |
+        | Use Case 3 |        |        |
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences and Results
+      description: A description of the consequences and results of the decision
+      placeholder: |-
+        What are the consequences of the decision?
+        Are there any alternatives that were considered?
+    validations:
+      required: true
